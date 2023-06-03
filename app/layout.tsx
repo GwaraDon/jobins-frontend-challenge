@@ -1,8 +1,7 @@
 import "./globals.css";
-import { Inter, Public_Sans } from "next/font/google";
+import { Public_Sans } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
 const public_sans = Public_Sans({ subsets: ["latin"] });
 
 export const metadata = {
