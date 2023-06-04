@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 35, 39, 46;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -23,9 +23,20 @@ body {
     @apply flex w-full p-6 rounded-2xl;
   }
 }
+.active-link svg > [stroke="#8B909A"] {
+  stroke: rgb(var(--foreground-rgb));
+}
 .grid-column {
   grid-template-columns: 394px 242px 1fr;
 }
+@media (max-width: 1340px) {
+  .grid-column {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .grid-column .top-country {
+    grid-column: 1 / 4;
+  }
+}
 .grid-custom {
-  grid-template-columns: 34px 100px minmax(158px, 1fr) 100px;
+  grid-template-columns: 34px 80px minmax(120px, 1fr) 100px;
 }

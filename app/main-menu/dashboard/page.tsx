@@ -1,12 +1,17 @@
 import Image from "next/image";
-import React from "react";
 import Header from "../../components/Header";
 import Sales from "../../../public/images/business-and-finance 1.png";
 import Profit from "../../../public/images/yen 1.png";
 import Brazil from "public//images/BR.png";
 import Aus from "public//images/AS.png";
 import US from "public//images/US.png";
-export default function Dashboard() {
+import { data } from "../../../mock/data";
+import Link from "next/link";
+import Table from "./components/Table";
+import Tabs from "./components/Tabs";
+
+export default async function Dashboard() {
+  const userlist: any = data;
   const title = "dashboard";
   return (
     <div className="dashboard py-2 px-5 bg-neutral-100  grow ">
@@ -111,7 +116,7 @@ export default function Dashboard() {
                     <path
                       d="M5 13L10 8L15 13"
                       stroke="#28C76F"
-                      stroke-width="1.75"
+                      strokeWidth="1.75"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
@@ -148,7 +153,7 @@ export default function Dashboard() {
                     <path
                       d="M5 8L10 13L15 8"
                       stroke="#EA5455"
-                      stroke-width="1.75"
+                      strokeWidth="1.75"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
@@ -186,7 +191,7 @@ export default function Dashboard() {
                     <path
                       d="M5 8L10 13L15 8"
                       stroke="#EA5455"
-                      stroke-width="1.75"
+                      strokeWidth="1.75"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
@@ -198,8 +203,14 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="card w-full bg-white"></div>
+        <div className="card w-full bg-white">
+          <Tabs></Tabs>
+        </div>
       </section>
+
+      <div className="rounded-2xl pt-4 bg-white mt-6">
+        <Table userlist={userlist} />
+      </div>
     </div>
   );
 }

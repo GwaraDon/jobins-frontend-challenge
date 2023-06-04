@@ -10,6 +10,7 @@ module.exports = {
         white: "#ffffff",
         primary: "#0F60FF",
         success: " #1EB564",
+        warning: "#FFC600",
         danger: "#EA5455",
         muted: "#8B909A",
       },
