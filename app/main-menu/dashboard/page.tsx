@@ -14,12 +14,12 @@ export default async function Dashboard() {
   const userlist: any = data;
   const title = "dashboard";
   return (
-    <div className="dashboard py-2 px-5 bg-neutral-100  grow ">
+    <div className="dashboard py-2 px-5 bg-neutral-100  grow  overflow-auto">
       <Header title={title}></Header>
       <section className="dashbord ">
         <div className="grid grid-column items-center  w-full gap-3 mb-4">
           {/* <!-- total sales box  max-w-[398px]--> */}
-          <div className=" total-sales h-[199px]  card  items-center  bg-white ">
+          <div className=" total-sales h-full  card  items-center  bg-white ">
             <div className="grow-0">
               <Image src={Sales} width={73} height={73} alt="sales " />
             </div>
@@ -54,7 +54,7 @@ export default async function Dashboard() {
             </div>
           </div>
           {/* total profit max-w-[242px] */}
-          <div className="total-profit  h-[199px]  card  flex-col  bg-white ">
+          <div className="total-profit  h-full  card  flex-col  bg-white ">
             <div className="flex items-center">
               <Image src={Profit} width={43} height={43} alt="sales " />
 
@@ -87,7 +87,7 @@ export default async function Dashboard() {
             </div>
           </div>
           {/* Top country max-w-[452px]*/}
-          <div className="top-country   h-[199px] card bg-white flex-col">
+          <div className="top-country   h-full card bg-white flex-col">
             <div className="grid grid-custom items-center flex-nowrap gap-4 mb-4">
               <Image src={US} width={34} height={73} alt="sales " />
               <div className="collection">
@@ -117,8 +117,8 @@ export default async function Dashboard() {
                       d="M5 13L10 8L15 13"
                       stroke="#28C76F"
                       strokeWidth="1.75"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                   <span className="ml-1">25.8%</span>
@@ -154,8 +154,8 @@ export default async function Dashboard() {
                       d="M5 8L10 13L15 8"
                       stroke="#EA5455"
                       strokeWidth="1.75"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
 
@@ -192,8 +192,8 @@ export default async function Dashboard() {
                       d="M5 8L10 13L15 8"
                       stroke="#EA5455"
                       strokeWidth="1.75"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
 
@@ -204,7 +204,7 @@ export default async function Dashboard() {
           </div>
         </div>
         <div className="card w-full bg-white">
-          <Tabs></Tabs>
+          <Tabs activeState={""}></Tabs>
         </div>
       </section>
 

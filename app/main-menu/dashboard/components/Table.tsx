@@ -4,29 +4,29 @@ import React from "react";
 
 export default function Table({ userlist }: { userlist: any }) {
   return (
-    <section className="table-section mt-6 rounded-2xl bg-white dark:bg-slate-800 ">
+    <section className="table-section mt-6 rounded-2xl bg-white dark:bg-slate-800 max-w-full overflow-auto ">
       <table className="border-collapse table-auto w-full text-base">
         <thead className="bg-white">
           <tr className="uppercase p-6 ">
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               ID
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               customer
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               Date
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               Total
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               Method
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               Status
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
               Action
             </th>
           </tr>

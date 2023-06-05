@@ -1,0 +1,52 @@
+@mixin toggle-sibar() {
+  .logo-section {
+    img + span {
+      display: none;
+    }
+    &:hover button {
+      opacity: 1;
+    }
+    button {
+      position: absolute;
+      right: -35px;
+      opacity: 0;
+      background: #fff;
+      padding: 5px;
+      border-right: 1px solid #e5e7eb;
+    }
+  }
+  nav a {
+    padding: 4px;
+    justify-content: center;
+    span {
+      display: none;
+    }
+  }
+  .main_nav {
+    padding-bottom: 0.5rem;
+  }
+  .main_nav,
+  .product_nav {
+    .px-8 {
+      display: none;
+    }
+  }
+}
+.sidebar {
+  min-width: 260px;
+  max-width: 260px;
+  @media (max-width: 991px) {
+    @include toggle-sibar();
+    min-width: 60px;
+    max-width: 64px;
+    .logo-section button {
+      display: none;
+    }
+  }
+}
+
+.close-sidebar {
+  @include toggle-sibar();
+  min-width: 60px;
+  max-width: 64px;
+}

@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../styles/styles.scss";
 import { Public_Sans } from "next/font/google";
 import Sidebar from "./components/Sidebar";
 

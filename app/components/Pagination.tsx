@@ -19,9 +19,9 @@ function Pagination() {
               <path
                 d="M10 4L6 8L10 12"
                 stroke="#8B909A"
-                stroke-width="1.75"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidt="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </Link>
@@ -65,9 +65,9 @@ function Pagination() {
               <path
                 d="M6 4L10 8L6 12"
                 stroke="#8B909A"
-                stroke-width="1.75"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidt="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </Link>
