@@ -1,2 +1,6 @@
+// scss for reset
 @use "./base/reset.scss" as *;
+
+// scss for components
+@use "./components/pagination.scss" as *;
 @use "./components/sidebar.scss" as *;
