@@ -24,7 +24,9 @@ export default function Header({ title }: { title: string }) {
   return (
     <>
       <div className="header flex justify-between items-center py-4">
-        <h1 className="text-3xl font-bold capitalize">{title}</h1>
+        <h1 className="md:text-3xl sm:text-2xl text-xl font-bold capitalize">
+          {title}
+        </h1>
         <div className="settings flex items-center gap-6">
           {/* <!-- notification  --> */}
           <div className="settings notification " ref={notificationRef}>

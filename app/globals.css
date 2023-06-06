@@ -44,7 +44,7 @@ body {
 }
 @media (max-width: 767px) {
   .grid-column {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(240px, 1fr);
   }
   .grid-column .top-country {
     grid-column: auto;
@@ -58,9 +58,15 @@ body {
     grid-column: span 4;
     order: 4;
   }
+  .grid-custom {
+    grid-template-columns: 34px minmax(60px, 80px) 1fr minmax(50px, 75px);
+  }
   .grid-custom .progress-percent {
     display: flex;
     justify-content: flex-end;
     grid-column: span 2;
+  }
+  .grid-auto-column-three {
+    grid-template-columns: 1fr;
   }
 }

@@ -15,10 +15,10 @@ export default function ({ activeState }: { activeState: string }) {
           <div className="flex items-center md:flex-wrap w-full">
             <div className="user grow">
               <div className="grid grid-auto-column-three xl:divide-x divide-x-0 xl:gap-0 gap-3">
-                <div className="user-info pl-6 flex items-center">
+                <div className="user-info sm:pl-6 flex items-center">
                   <div className="flex items-center">
                     <div
-                      className="user-img rounded-full w-[72px] h-[72px] overflow-hidden"
+                      className="user-img rounded-full sm:w-[72px] w-[48px] sm:h-[72px] h-[48px] overflow-hidden"
                       style={{
                         background:
                           "linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #7367F0",
@@ -27,17 +27,17 @@ export default function ({ activeState }: { activeState: string }) {
                     >
                       <span></span>
                     </div>
-                    <div className="ml-4">
-                      <div className="user-name font-semibold text-lg">
+                    <div className="sm:ml-4 ml-2">
+                      <div className="user-name font-semibold sm:text-lg ">
                         Robert Fox
                       </div>
-                      <div className="user-email text-muted ">
+                      <div className="user-email text-muted sm:text-base text-sm ">
                         robert@gmail.com
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="user-info pl-6 ">
+                <div className="user-info sm:pl-6  ">
                   <div className="title text-muted font-medium text-sm uppercase mb-4">
                     PERSONAL INFORMATION
                   </div>
@@ -58,37 +58,37 @@ export default function ({ activeState }: { activeState: string }) {
                     </tbody>
                   </table>
                 </div>
-                <div className="pl-6">
+                <div className="sm:pl-6 ">
                   <div className="user-address  ">
                     <div className="title text-muted font-medium text-sm uppercase mb-4">
                       Shipping Address
                     </div>
-                    <div className="text-sm mb-6">
+                    <address className="text-sm mb-6 not-italic">
                       3517 W. Gray St. Utica, Pennsylvania 57867
-                    </div>
+                    </address>
                   </div>
-                  <div className="user-status flex items-center justify-between">
+                  <div className="user-status flex items-center justify-between flex-wrap">
                     <div className="status-box total-order">
-                      <div className="status-box-number font-bold text-2xl">
+                      <div className="status-box-number font-bold sm:text-2xl text-xl">
                         150
                       </div>
-                      <div className="status-box-text text-muted font-medium text-sm capitalize">
+                      <div className="status-box-text text-muted font-medium sm:text-sm text-xs capitalize">
                         Total order
                       </div>
                     </div>
                     <div className="status-box completed">
-                      <div className="status-box-number font-bold text-2xl">
+                      <div className="status-box-number font-bold sm:text-2xl text-xl">
                         140
                       </div>
-                      <div className="status-box-text text-muted font-medium text-sm capitalize">
+                      <div className="status-box-text text-muted font-medium sm:text-sm text-xs capitalize">
                         Completed
                       </div>
                     </div>
                     <div className="status-box cancelled">
-                      <div className="status-box-number font-bold text-2xl">
+                      <div className="status-box-number font-bold sm:text-2xl text-xl">
                         10
                       </div>
-                      <div className="status-box-text text-muted font-medium text-sm capitalize">
+                      <div className="status-box-text text-muted font-medium sm:text-sm text-xs capitalize">
                         cancelled
                       </div>
                     </div>

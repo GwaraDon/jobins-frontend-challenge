@@ -26,15 +26,17 @@ export default async function Dashboard() {
             <div className="grow-0">
               <Image src={Sales} width={73} height={73} alt="sales " />
             </div>
-            <div className="divider mx-8 bg-gray-100 w-[2px] h-[140px]"></div>
+            <div className="divider  bg-gray-100 w-[2px] h-[140px] sm:mx-8 mx-3 "></div>
             <div>
               <div className="card-title">
-                <p className="text-lg font-semibold">Total Sales & Costs</p>
+                <p className="sm:text-lg text-base font-semibold">
+                  Total Sales & Costs
+                </p>
                 <small className="text-muted text-sm">Last 7 days</small>
               </div>
               <div className="card-body pt-7">
                 <div className="price font-bold text-xl">$350K</div>
-                <div className="text-sm flex items-center">
+                <div className="text-sm flex items-center flex-wrap">
                   <small className="text-success mr-2 flex items-center">
                     <svg
                       width="16"
@@ -62,7 +64,9 @@ export default async function Dashboard() {
               <Image src={Profit} width={43} height={43} alt="sales " />
 
               <div className="card-title ml-6">
-                <p className="text-lg font-semibold">Total Profit</p>
+                <p className="sm:text-lg text-base font-semibold">
+                  Total Profit
+                </p>
                 <small className="text-muted text-sm">Last 7 days</small>
               </div>
             </div>
@@ -91,7 +95,7 @@ export default async function Dashboard() {
           </div>
           {/* Top country max-w-[452px]*/}
           <div className="top-country   h-full card bg-white flex-col">
-            <div className="grid grid-custom items-center flex-nowrap gap-4 mb-4">
+            <div className="grid grid-custom items-center flex-nowrap sm:gap-4 gap-2 mb-4">
               <Image src={US} width={34} height={73} alt="sales " />
               <div className="collection">
                 <div className="text-base font-semibold">$30k</div>
@@ -216,8 +220,8 @@ export default async function Dashboard() {
             action=""
             className="flex  flex-wrap gap-4 justify-between items-center w-full"
           >
-            <div className="flex justify-start items-center">
-              <div className="relative inline-flex  items-center">
+            <div className="flex sm:flex-nowrap  flex-wrap gap-4 justify-start items-center sm:w-auto w-full">
+              <div className="relative inline-flex  items-center sm:max-w-[136px] max-w-full w-full ">
                 <svg
                   className="w-4 h-4 absolute  right-[.75rem] pointer-events-none"
                   width="20"
@@ -236,10 +240,10 @@ export default async function Dashboard() {
                 </svg>
 
                 <select
-                  className="bg-white pl-4 pr-8 py-3  outline-none rounded focus:outline-none appearance-none"
+                  className="bg-white w-full  pl-4 pr-8 py-3 outline-none rounded focus:outline-none appearance-none"
                   name="select-box"
                 >
-                  <option value="1">All Status</option>
+                  <option value="1">Status : All</option>
                   {["Completed", "Pending", "Cancelled"].map((opt, index) => (
                     <option value={opt} key={index}>
                       {opt}
@@ -249,9 +253,7 @@ export default async function Dashboard() {
               </div>
               <Searchbox />
             </div>
-            <div>
-              <CustomDateRange />
-            </div>
+            <CustomDateRange />
           </form>
         </div>
       </section>

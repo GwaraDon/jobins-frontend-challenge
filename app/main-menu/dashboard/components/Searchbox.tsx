@@ -3,10 +3,10 @@ import React from "react";
 export default function Searchbox() {
   return (
     <>
-      <div className="relative inline-flex items-center">
+      <div className="relative inline-flex items-center sm:min-w-[200px] max-w-full w-full">
         <input
           type="text"
-          className="bg-white border-none ml-3 pl-4 pr-8 rounded  py-3 outline-none focus:outline-none placeholder:text-muted"
+          className="bg-white w-full  border-none  pl-4 pr-8 rounded  py-3 outline-none focus:outline-none placeholder:text-muted"
           placeholder="Search..."
         />
         <button type="submit" className="absolute right-[.75rem]">
