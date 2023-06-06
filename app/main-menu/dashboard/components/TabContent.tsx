@@ -42,18 +42,20 @@ export default function ({ activeState }: { activeState: string }) {
                     PERSONAL INFORMATION
                   </div>
                   <table className="text-left text-sm">
-                    <tr>
-                      <th className="pr-4 pb-4"> Contact Number</th>
-                      <td className="pb-4">(201) 555-0124 1</td>
-                    </tr>
-                    <tr>
-                      <th className="pr-4 pb-4">Date of Birth</th>
-                      <td className="pb-4"> Jan, 1985 </td>
-                    </tr>
-                    <tr>
-                      <th className="pr-4 pb-4">Member Since</th>
-                      <td className="pb-4">3 March, 2023</td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <th className="pr-4 pb-4"> Contact Number</th>
+                        <td className="pb-4">(201) 555-0124 1</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-4 pb-4">Date of Birth</th>
+                        <td className="pb-4"> Jan, 1985 </td>
+                      </tr>
+                      <tr>
+                        <th className="pr-4 pb-4">Member Since</th>
+                        <td className="pb-4">3 March, 2023</td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
                 <div className="pl-6">

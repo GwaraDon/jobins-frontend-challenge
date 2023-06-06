@@ -7,6 +7,7 @@ function Pagination() {
         <li>
           <Link
             href="#"
+            aria-label="Previous"
             className="pointer-events-none relative block rounded bg-transparent ml-1 px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
           >
             <svg
@@ -19,7 +20,7 @@ function Pagination() {
               <path
                 d="M10 4L6 8L10 12"
                 stroke="#8B909A"
-                strokeWidt="1.75"
+                strokeWidth="1.75"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -29,7 +30,7 @@ function Pagination() {
         <li aria-current="page">
           <Link
             className="relative block rounded bg-primary ml-1 px-3 py-1.5 text-sm text-white transition-all duration-300 hover:bg-primary hover:text-white dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-            href="#!"
+            href="#"
           >
             1
           </Link>
@@ -37,7 +38,7 @@ function Pagination() {
         <li>
           <Link
             className="relative block rounded bg-neutral-100 ml-1 px-3 py-1.5 text-sm font-medium text-primary-700 transition-all duration-300  hover:bg-primary hover:text-white"
-            href="#!"
+            href="#"
           >
             2
           </Link>
@@ -45,15 +46,16 @@ function Pagination() {
         <li>
           <Link
             className="relative block rounded bg-neutral-100 ml-1 px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-primary  hover:text-white dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-            href="#!"
+            href="#"
           >
             3
           </Link>
         </li>
         <li>
           <Link
+            aria-label="Next"
             className="relative block rounded bg-neutral-100 ml-1 px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-primary  hover:text-white dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-            href="#!"
+            href="#"
           >
             <svg
               width="16"
@@ -65,7 +67,7 @@ function Pagination() {
               <path
                 d="M6 4L10 8L6 12"
                 stroke="#8B909A"
-                strokeWidt="1.75"
+                strokeWidth="1.75"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />

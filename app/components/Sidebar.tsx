@@ -214,7 +214,7 @@ export default function Sidebar() {
               >
                 <path
                   fillRule="evenodd"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                   d="M11.0001 16.2707L5.34243 19.2453L6.42318 12.9451L1.83984 8.48367L8.16484 7.567L10.9937 1.83508L13.8225 7.567L20.1475 8.48367L15.5642 12.9451L16.6449 19.2453L11.0001 16.2707Z"
                   stroke="#8B909A"
                   strokeWidth="1.75"
@@ -223,7 +223,7 @@ export default function Sidebar() {
                 />
                 <path
                   fillRule="evenodd"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                   d="M11.0001 16.2707L5.34243 19.2453L6.42318 12.9451L1.83984 8.48367L8.16484 7.567L10.9937 1.83508L13.8225 7.567L20.1475 8.48367L15.5642 12.9451L16.6449 19.2453L11.0001 16.2707Z"
                   stroke="#8B909A"
                   strokeWidth="1.75"

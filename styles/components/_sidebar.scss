@@ -1,4 +1,4 @@
-@mixin toggle-sibar() {
+@mixin sidebar() {
   .logo-section {
     img + span {
       display: none;
@@ -36,7 +36,7 @@
   min-width: 260px;
   max-width: 260px;
   @media (max-width: 991px) {
-    @include toggle-sibar();
+    @include sidebar();
     min-width: 60px;
     max-width: 64px;
     .logo-section button {
@@ -46,7 +46,7 @@
 }
 
 .close-sidebar {
-  @include toggle-sibar();
+  @include sidebar();
   min-width: 60px;
   max-width: 64px;
 }

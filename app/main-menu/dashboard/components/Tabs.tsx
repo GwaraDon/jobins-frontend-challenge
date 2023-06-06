@@ -21,7 +21,8 @@ export default function Tabs({ activeState }: { activeState: string }) {
             <span
               className="mt-2 block whitespace-nowrap border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase  text-muted hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent aria-selected:border-primary aria-selected:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:aria-selected:border-primary-400 dark:aria-selected:text-primary-400"
               role="tab"
-              aria-controls={`tabs-${tab}`}
+              data-te-nav-active={activeTab === tab}
+              // aria-controls={`tabs-${tab}`}
               aria-selected={activeTab === tab}
               onClick={() => setActiveTab(tab)}
             >
