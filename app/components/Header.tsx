@@ -84,8 +84,8 @@ export default function Header({ title }: { title: string }) {
                 aria-label="notification box"
                 data-dropdown-show={showNotification}
                 className={`${showNotification ? "block" : "hidden"}
-                notification-box transition-all duration-300 ease-in-out 
-                max-w-[300px] min-w-[300px] p-4 shadow-md rounded-md bg-white absolute top-[40px] right-0
+                notification-box transition-all duration-300 ease-in-out drop-icon
+                max-w-[300px] min-w-[250px] z-[999] p-4 shadow-md rounded-md bg-white absolute top-[40px] sm:right-0 right-[-80px]
               `}
               >
                 <div className="notification-card">
@@ -230,7 +230,7 @@ export default function Header({ title }: { title: string }) {
               <ul
                 className={`${
                   showAccount ? "block" : "hidden"
-                } account-box absolute z-[1000] top-[40px] right-0 m-0 min-w-max list-none overflow-hidden rounded-lg border-none bg-white  shadow-md dark:bg-neutral-700 `}
+                } account-box  absolute z-[1000] top-[40px] right-0 m-0 min-w-max list-none overflow-hidden rounded-lg border-none bg-white  shadow-md dark:bg-neutral-700 `}
                 aria-labelledby="accountDropdownButton"
               >
                 <li>

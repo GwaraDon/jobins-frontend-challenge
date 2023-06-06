@@ -4,3 +4,19 @@
 // scss for components
 @use "./components/pagination.scss" as *;
 @use "./components/sidebar.scss" as *;
+
+//dropdown css icon
+.drop-icon {
+  &::before {
+    content: "";
+    position: absolute;
+    border-color: transparent transparent #ffffff transparent;
+    border-width: 10px 10px 12px;
+    top: -22px;
+    right: 6px;
+    z-index: 2;
+    @media (max-width: 575px) {
+      right: 86px;
+    }
+  }
+}
