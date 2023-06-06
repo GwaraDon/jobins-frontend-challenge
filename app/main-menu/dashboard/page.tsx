@@ -16,16 +16,6 @@ export default async function Dashboard() {
   const userlist: any = data;
   const title = "dashboard";
 
-  // const dateRef: any = useRef();
-  // useEffect(() => {
-  //   document.addEventListener("click", hideOnClickOutside, true);
-  // }, []);
-  // const hideOnClickOutside = (e: Event) => {
-  //   if (dateRef.current && !dateRef.current.contains(e.target)) {
-  //     setDateOpen(false);
-  //   }
-  // };
-
   return (
     <div className="dashboard py-2 px-5 bg-neutral-100  grow  overflow-auto z-10">
       <Header title={title}></Header>
@@ -67,7 +57,7 @@ export default async function Dashboard() {
             </div>
           </div>
           {/* total profit max-w-[242px] */}
-          <div className="total-profit  h-full  card  flex-col  bg-white ">
+          <div className="total-profit  h-full  card  flex-col justify-center bg-white ">
             <div className="flex items-center">
               <Image src={Profit} width={43} height={43} alt="sales " />
 
