@@ -5,10 +5,11 @@
     }
     &:hover button {
       opacity: 1;
+      right: -35px;
     }
     button {
       position: absolute;
-      right: -35px;
+      right: 0;
       opacity: 0;
       background: #fff;
       padding: 5px;
@@ -49,4 +50,7 @@
   @include sidebar();
   min-width: 60px;
   max-width: 64px;
+  .logo-section button {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
 }
