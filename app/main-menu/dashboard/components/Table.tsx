@@ -1,32 +1,33 @@
 import Pagination from "@/app/components/Pagination";
+import ShowTable from "@/app/components/ShowTable";
 import Link from "next/link";
 import React from "react";
 
 export default function Table({ userlist }: { userlist: any }) {
   return (
-    <div className=" mt-6 rounded-2xl bg-white dark:bg-slate-800 max-w-full overflow-auto ">
+    <div className=" mt-6 p-4 rounded-2xl bg-white dark:bg-slate-800 max-w-full overflow-auto ">
       <table className="border-collapse table-auto w-full text-base">
         <thead className="bg-white">
           <tr className="uppercase p-6 ">
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               ID
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               customer
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               Date
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               Total
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               Method
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               Status
             </th>
-            <th className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-muted text-sm font-medium text-left">
+            <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
               Action
             </th>
           </tr>
@@ -34,19 +35,19 @@ export default function Table({ userlist }: { userlist: any }) {
         <tbody className="bg-white">
           {userlist.map((user: any) => (
             <tr key={user.id} className="p-6">
-              <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8">
+              <td className="border-b border-slate-100 dark:border-slate-700 p-4 ">
                 {user.id}
               </td>
-              <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8">
+              <td className="border-b border-slate-100 dark:border-slate-700 p-4 ">
                 {user.customer}
               </td>
-              <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8">
+              <td className="border-b border-slate-100 dark:border-slate-700 p-4 ">
                 {user.date}
               </td>
-              <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8">
+              <td className="border-b border-slate-100 dark:border-slate-700 p-4 ">
                 ${user.total}
               </td>
-              <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8">
+              <td className="border-b border-slate-100 dark:border-slate-700 p-4 ">
                 {user.method}
               </td>
               <td
@@ -54,11 +55,11 @@ export default function Table({ userlist }: { userlist: any }) {
                   user.status === "pending" ? "text-warning" : ""
                 } ${user.status === "completed" ? "text-success" : ""} ${
                   user.status === "rejected" ? "text-danger" : ""
-                }  border-b border-slate-100 dark:border-sborder-b dark:border-slate-700 p-4 pl-8`}
+                }  border-b border-slate-100 dark:border-sborder-b dark:border-slate-700 p-4 `}
               >
                 {user.status}
               </td>
-              <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8">
+              <td className="border-b border-slate-100 dark:border-slate-700 p-4 ">
                 <Link href="#" className="capitalize text-primary">
                   view more
                 </Link>
@@ -67,8 +68,10 @@ export default function Table({ userlist }: { userlist: any }) {
           ))}
         </tbody>
       </table>
-
-      <Pagination></Pagination>
+      <div className="flex flex-wrap sm:justify-between justify-end items-center p-4 gap-3">
+        <ShowTable />
+        <Pagination></Pagination>
+      </div>
     </div>
   );
 }

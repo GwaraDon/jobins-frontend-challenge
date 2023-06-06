@@ -27,7 +27,7 @@ export default async function Dashboard() {
   // };
 
   return (
-    <div className="dashboard py-2 px-5 bg-neutral-100  grow  overflow-auto">
+    <div className="dashboard py-2 px-5 bg-neutral-100  grow  overflow-auto z-10">
       <Header title={title}></Header>
       <section className="dashbord ">
         <div className="grid grid-column items-center  w-full gap-3 mb-4">
@@ -222,7 +222,10 @@ export default async function Dashboard() {
       </section>
       <section className="filters my-6">
         <div className="flex">
-          <form action="" className="flex justify-between items-center w-full">
+          <form
+            action=""
+            className="flex  flex-wrap gap-4 justify-between items-center w-full"
+          >
             <div className="flex justify-start items-center">
               <div className="relative inline-flex  items-center">
                 <svg

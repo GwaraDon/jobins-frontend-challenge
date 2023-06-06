@@ -17,7 +17,7 @@ export default function Sidebar() {
       <aside
         className={` ${
           toggle ? "close-sidebar  " : " "
-        } sidebar transition-all duration-300  delay-50 flex  flex-col justify-start max-h-screen sticky top-0  border-e    `}
+        } sidebar transition-all duration-300  z-20 flex  flex-col justify-start max-h-screen sticky top-0  border-e    `}
       >
         <div className="logo-section px-4 py-5 relative flex items-center justify-between">
           <Link
@@ -32,7 +32,7 @@ export default function Sidebar() {
             title="Toggle Sidebar"
             className={`${
               toggle ? "rotate-180" : ""
-            } transition-transform delay-300`}
+            } transition-transform delay-100  z-[999]`}
             onClick={() => setToggle(!toggle)}
           >
             <svg

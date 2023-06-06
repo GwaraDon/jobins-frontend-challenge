@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 function Pagination() {
   return (
-    <nav className={`navigation p-4`}>
+    <nav className={`pagination navigation `} aria-label="Pagination">
       <ul className="list-style-none flex">
         <li>
           <Link
