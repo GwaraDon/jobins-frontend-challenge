@@ -9,10 +9,23 @@ import { data } from "../../../mock/data";
 import Link from "next/link";
 import Table from "./components/Table";
 import Tabs from "./components/Tabs";
+import Searchbox from "./components/Searchbox";
+import CustomDateRange from "@/app/components/CustomDateRange";
 
 export default async function Dashboard() {
   const userlist: any = data;
   const title = "dashboard";
+
+  // const dateRef: any = useRef();
+  // useEffect(() => {
+  //   document.addEventListener("click", hideOnClickOutside, true);
+  // }, []);
+  // const hideOnClickOutside = (e: Event) => {
+  //   if (dateRef.current && !dateRef.current.contains(e.target)) {
+  //     setDateOpen(false);
+  //   }
+  // };
+
   return (
     <div className="dashboard py-2 px-5 bg-neutral-100  grow  overflow-auto">
       <Header title={title}></Header>
@@ -207,10 +220,51 @@ export default async function Dashboard() {
           <Tabs activeState={""}></Tabs>
         </div>
       </section>
+      <section className="filters my-6">
+        <div className="flex">
+          <form action="" className="flex justify-between items-center w-full">
+            <div className="flex justify-start items-center">
+              <div className="relative inline-flex  items-center">
+                <svg
+                  className="w-4 h-4 absolute  right-[.75rem] pointer-events-none"
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 8L10 13L15 8"
+                    stroke="#8B909A"
+                    strokeWidth="1.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
 
-      <div className="rounded-2xl pt-4 bg-white mt-6">
+                <select
+                  className="bg-white pl-4 pr-8 py-3  outline-none rounded focus:outline-none appearance-none"
+                  name="select-box"
+                >
+                  <option value="1">All Status</option>
+                  {["Completed", "Pending", "Cancelled"].map((opt, index) => (
+                    <option value={opt} key={index}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <Searchbox />
+            </div>
+            <div>
+              <CustomDateRange />
+            </div>
+          </form>
+        </div>
+      </section>
+      <section className="table-section rounded-2xl bg-white mt-6">
         <Table userlist={userlist} />
-      </div>
+      </section>
     </div>
   );
 }

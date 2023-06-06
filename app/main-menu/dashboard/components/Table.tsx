@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Table({ userlist }: { userlist: any }) {
   return (
-    <section className="table-section mt-6 rounded-2xl bg-white dark:bg-slate-800 max-w-full overflow-auto ">
+    <div className=" mt-6 rounded-2xl bg-white dark:bg-slate-800 max-w-full overflow-auto ">
       <table className="border-collapse table-auto w-full text-base">
         <thead className="bg-white">
           <tr className="uppercase p-6 ">
@@ -69,6 +69,6 @@ export default function Table({ userlist }: { userlist: any }) {
       </table>
 
       <Pagination></Pagination>
-    </section>
+    </div>
   );
 }
