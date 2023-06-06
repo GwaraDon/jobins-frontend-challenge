@@ -6,7 +6,7 @@ import React from "react";
 export default function Table({ userlist }: { userlist: any }) {
   return (
     <div className=" mt-6 p-4 rounded-2xl bg-white dark:bg-slate-800 max-w-full overflow-auto ">
-      <table className="border-collapse table-auto w-full text-base">
+      <table className="border-collapse table-auto w-full sm:text-base text-sm">
         <thead className="bg-white">
           <tr className="uppercase p-6 ">
             <th className="border-b border-slate-100 dark:border-slate-700 p-4  text-muted text-sm font-medium text-left">
