@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import logo from "public/logo.png";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
@@ -25,7 +24,7 @@ export default function Sidebar() {
             className="flex items-center"
             title="Logo"
           >
-            <Image src={logo} width={28} height={24} alt="logo_image" />
+            <Image src="/logo.png" width={28} height={24} alt="logo_image" />
             <span className="font-bold text-xl ml-2.5"> JoBins</span>
           </Link>
           <button
