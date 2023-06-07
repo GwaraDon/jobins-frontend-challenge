@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import Header from "../../components/Header";
 
 import { data } from "../../../mock/data";
@@ -19,8 +21,8 @@ export default async function Dashboard() {
           {/* <!-- total sales box  max-w-[398px]--> */}
           <div className=" total-sales h-full  card  items-center  bg-white ">
             <div className="grow-0">
-              <Image
-                src="/images/business-and-finance 1.png"
+              <CldImage
+                src="https://res.cloudinary.com/dvgaajg5w/image/upload/v1686136529/jobins/business-and-finance_1_bbqfmf.png"
                 width={73}
                 height={73}
                 alt="sales "
@@ -61,8 +63,8 @@ export default async function Dashboard() {
           {/* total profit max-w-[242px] */}
           <div className="total-profit  h-full  card  flex-col justify-center bg-white ">
             <div className="flex items-center">
-              <Image
-                src="/images/yen 1.png"
+              <CldImage
+                src="https://res.cloudinary.com/dvgaajg5w/image/upload/v1686136529/jobins/yen_1_cquuab.png"
                 width={43}
                 height={43}
                 alt="Profit "
@@ -101,8 +103,8 @@ export default async function Dashboard() {
           {/* Top country max-w-[452px]*/}
           <div className="top-country   h-full card bg-white flex-col">
             <div className="grid grid-custom items-center flex-nowrap sm:gap-4 gap-2 mb-4">
-              <Image
-                src="/images/US.png"
+              <CldImage
+                src="https://res.cloudinary.com/dvgaajg5w/image/upload/v1686136529/jobins/US_kmx2qf.png"
                 width={34}
                 height={73}
                 alt="united states "
@@ -143,8 +145,8 @@ export default async function Dashboard() {
               </div>
             </div>
             <div className="grid grid-custom items-center flex-nowrap gap-4 mb-4">
-              <Image
-                src="/images/BR.png"
+              <CldImage
+                src="https://res.cloudinary.com/dvgaajg5w/image/upload/v1686136529/jobins/BR_frcxf8.png"
                 width={34}
                 height={34}
                 alt="Brazil "
@@ -186,8 +188,8 @@ export default async function Dashboard() {
               </div>
             </div>
             <div className="grid grid-custom items-center flex-nowrap gap-4">
-              <Image
-                src="/images/AS.png"
+              <CldImage
+                src="https://res.cloudinary.com/dvgaajg5w/image/upload/v1686136529/jobins/AS_k03c6p.png"
                 width={34}
                 height={34}
                 alt="Australia "

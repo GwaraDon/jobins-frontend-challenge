@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+
+import { CldImage } from "next-cloudinary";
 import React from "react";
 import Link from "next/link";
 
@@ -24,7 +26,12 @@ export default function Sidebar() {
             className="flex items-center"
             title="Logo"
           >
-            <Image src="/logo.png" width={28} height={24} alt="logo_image" />
+            <CldImage
+              src="https://res.cloudinary.com/dvgaajg5w/image/upload/v1686136554/jobins/logo_de8ing.png"
+              width={28}
+              height={24}
+              alt="logo_image"
+            />
             <span className="font-bold text-xl ml-2.5"> JoBins</span>
           </Link>
           <button
