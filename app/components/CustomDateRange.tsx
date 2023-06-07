@@ -45,6 +45,7 @@ export default function CustomDateRange() {
         <button
           type="button"
           className="absolute right-[.75rem]"
+          aria-label="filter by date"
           onClick={() => setDateOpen((dateOpen: any) => !dateOpen)}
         >
           <svg

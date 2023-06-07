@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Header from "../../components/Header";
-import Sales from "../../../public/images/business-and-finance 1.png";
-import Profit from "../../../public/images/yen 1.png";
-import Brazil from "public//images/BR.png";
-import Aus from "public//images/AS.png";
-import US from "public//images/US.png";
+import Sales from "public/images/business-and-finance 1.png";
+import Profit from "public/images/yen 1.png";
+import Brazil from "public/images/BR.png";
+import Aus from "public/images/AS.png";
+import US from "public/images/US.png";
 import { data } from "../../../mock/data";
 import Link from "next/link";
 import Table from "./components/Table";
@@ -61,7 +61,7 @@ export default async function Dashboard() {
           {/* total profit max-w-[242px] */}
           <div className="total-profit  h-full  card  flex-col justify-center bg-white ">
             <div className="flex items-center">
-              <Image src={Profit} width={43} height={43} alt="sales " />
+              <Image src={Profit} width={43} height={43} alt="Profit " />
 
               <div className="card-title ml-6">
                 <p className="sm:text-lg text-base font-semibold">
@@ -96,7 +96,7 @@ export default async function Dashboard() {
           {/* Top country max-w-[452px]*/}
           <div className="top-country   h-full card bg-white flex-col">
             <div className="grid grid-custom items-center flex-nowrap sm:gap-4 gap-2 mb-4">
-              <Image src={US} width={34} height={73} alt="sales " />
+              <Image src={US} width={34} height={73} alt="united states " />
               <div className="collection">
                 <div className="text-base font-semibold">$30k</div>
 
@@ -133,7 +133,7 @@ export default async function Dashboard() {
               </div>
             </div>
             <div className="grid grid-custom items-center flex-nowrap gap-4 mb-4">
-              <Image src={Brazil} width={34} height={34} alt="sales " />
+              <Image src={Brazil} width={34} height={34} alt="Brazil " />
               <div className="collection">
                 <div className="text-base font-semibold">$26k</div>
 
@@ -171,7 +171,7 @@ export default async function Dashboard() {
               </div>
             </div>
             <div className="grid grid-custom items-center flex-nowrap gap-4">
-              <Image src={Aus} width={34} height={34} alt="sales " />
+              <Image src={Aus} width={34} height={34} alt="Australia " />
               <div className="collection">
                 <div className="text-base font-semibold">$17k</div>
 

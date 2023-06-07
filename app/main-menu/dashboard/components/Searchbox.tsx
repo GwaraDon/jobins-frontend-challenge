@@ -9,7 +9,11 @@ export default function Searchbox() {
           className="bg-white w-full  border-none  pl-4 pr-8 rounded  py-3 outline-none focus:outline-none placeholder:text-muted"
           placeholder="Search..."
         />
-        <button type="submit" className="absolute right-[.75rem]">
+        <button
+          type="submit"
+          className="absolute right-[.75rem]"
+          aria-label="Search customer"
+        >
           <svg
             width="18"
             height="18"

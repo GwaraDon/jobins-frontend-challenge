@@ -211,8 +211,7 @@ export default function Header({ title }: { title: string }) {
           <div className="settings account" ref={accountRef}>
             <div className="relative">
               <div
-                aria-label="account dropdown icon"
-                aria-expanded={showAccount}
+                aria-controls="accountDropdown"
                 onClick={() => setShowAccount(!showAccount)}
                 style={{
                   background:
@@ -231,7 +230,8 @@ export default function Header({ title }: { title: string }) {
                 className={`${
                   showAccount ? "block" : "hidden"
                 } account-box  absolute z-[1000] top-[40px] right-0 m-0 min-w-max list-none overflow-hidden rounded-lg border-none bg-white  shadow-md dark:bg-neutral-700 `}
-                aria-labelledby="accountDropdownButton"
+                id="accountDropdown"
+                aria-label="accountDropdown"
               >
                 <li>
                   <Link
