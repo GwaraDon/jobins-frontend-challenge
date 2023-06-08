@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -7,6 +7,15 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 export default function CustomDateRange() {
   const [dateOpen, setDateOpen] = useState(false);
+  const dateRef: any = useRef();
+  useEffect(() => {
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  const hideOnClickOutside = (e: Event) => {
+    if (dateRef.current && !dateRef.current.contains(e.target)) {
+      setDateOpen(false);
+    }
+  };
   const [state, setState] = useState([
     {
       startDate: new Date(),
@@ -32,7 +41,10 @@ export default function CustomDateRange() {
   };
 
   return (
-    <div className="form-group mb-0 relative sm:max-w-[200px] max-w-full w-full">
+    <div
+      className="form-group mb-0 relative sm:max-w-[200px] max-w-full w-full"
+      ref={dateRef}
+    >
       <div className="relative inline-flex  items-center  w-full">
         <input
           readOnly
